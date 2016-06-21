@@ -39,3 +39,23 @@ getEveMapLabels <- function(type=c("I", "II", "III")){
     labels
 }
 
+getEveSegPath <- function(alg="FAST"){
+    if (alg!="FAST"){
+        stop("Only FAST segmentation available at the moment.")
+    }
+    file <- system.file(package="EveTemplate", "data/JHU_MNI_SS_T1_Brain_FAST_seg.nii.gz")
+    file
+}
+
+readEveSeg <- function(alg="FAST", reorient=FALSE, verbose=TRUE){
+    if (alg!="FAST"){
+        stop("Only FAST segmentation available at the moment.")
+    }
+    if (verbose){
+        cat("Label 0: Background \n")
+        cat("Label 1: CSF \n")
+        cat("Label 2: GM \n")
+        cat("Label 3: WM \n")
+    }
+    readNIfTI(getEveSegPath(alg=alg), reorient=reorient)
+}

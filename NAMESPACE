@@ -5,4 +5,5 @@ export(readEveTemplate)
 export(getEveMapPath)
 export(readEveMap)
 export(getEveMapLabels)
-
+export(getEveSegPath)
+export(readEveSeg)
