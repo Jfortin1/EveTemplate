@@ -12,7 +12,6 @@ getEveTemplatePath <- function(what=c("full", "brain", "brain_mask", "T2")){
     file
 }
 
-
 readEveTemplate  <- function(what=c("full", "brain", "brain_mask", "T2"), reorient=FALSE){
     what <- match.arg(what)
     readNIfTI(getEveTemplatePath(what=what), reorient=reorient)
@@ -31,4 +30,12 @@ readEveMap <- function(type=c("I", "II", "III"), reorient=FALSE){
 }
 
 
+getEveMapLabels <- function(type=c("I", "II", "III")){
+    type <- match.arg(type)
+    file <- system.file(package="EveTemplate", "data/eve_map_labels.rda")
+    load(file)
+    labels <- eve_map_labels[[type]]
+    rm(eve_map_labels)
+    labels
+}
 
