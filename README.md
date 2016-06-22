@@ -19,8 +19,8 @@
 | -------------  | -------------  | -------------  |
 | JHU_MNI_SS_TI.nii.gz    | T1-w Eve Template |  `readEveTemplate("T1")`| 
 | JHU_MNI_SS_T2.nii.gz    | T2-w Eve Template |  `readEveTemplate("T2")`| 
-| JHU_MNI_SS_Brain.nii.gz | T1-w Eve Template, skull stripped  |  `readEveTemplate("brain")`| 
-| JHU_MNI_SS_Brain_Mask.nii.gz    | T1-w Eve Template, brain mask |  `readEveTemplate("brain_mask")`| 
+| JHU_MNI_SS_Brain.nii.gz | T1-w Eve Template, skull stripped  |  `readEveTemplate("Brain")`| 
+| JHU_MNI_SS_Brain_Mask.nii.gz    | T1-w Eve Template, brain mask |  `readEveTemplate("Brain_Mask")`| 
 | JHU_MNI_SS_Brain_FAST_seg.nii.gz    | FSL FAST tissue classes (1=CSF,2=GM,3=WM) |  `readEveSeg()`| 
 | JHU_MNI_SS_WMPM_Type-I.nii.gz    | White Matter Parcellation Map (Type I) |  `readEveMap("I")`| 
 | JHU_MNI_SS_WMPM_Type-II.nii.gz    | White Matter Parcellation Map (Type II) |  `readEveMap("II")`| 
