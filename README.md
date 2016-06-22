@@ -17,7 +17,7 @@
 ## Table of content
 - [1. Introduction](#id-section1)
 - [2. Reading the data into R](#id-section2)
-- [3. Curation of the WMPM labels](#id-section4)
+- [3. White Matter Parcellation Map](#id-section4)
 - [4. Files](#id-section4)
 - [5. Miscellaneous](#id-section5)
 
@@ -29,7 +29,11 @@
 ## 2. Reading the data into R
 
 <div id='id-section3'/>
-## 3. Curation of the WMPM labels
+## 3. White Matter Parcellation Map
+
+- Curation of the labels
+- Use 
+- 3 different types
 
 <div id='id-section4'/>
 ## 4. Files
