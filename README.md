@@ -11,8 +11,7 @@
 |  | Description | Citation     | Link |
 | -------------  | -------------  | -------------  | -------------  |
 | JHU-MNI-ss Atlas    | File `RegLib_C26_MoriAtlas.zip`   | Kenichi Oishi, Andreia V Faria and Susumu Mori, _JHU-MNI-ss Atlas_, 2010, Johns Hopkins University School of Medicine, Department of Radiology, Center for Brain Imaging Science| [Link](https://www.slicer.org/publications/item/view/1883) |
-| WMPM    | Paper describing the White Matter Parcellation Map |Oishi et al., _Atlas-based whole brain white matter analysis using large
-deformation diffeomorphic metric mapping: Application to normal elderly and Alzheimer’s disease participants_, Neuroimage, 2009 |[Link](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwiOmpCg4bvNAhWBQj4KHfQFAP8QFggeMAA&url=http%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpubmed%2F19385016&usg=AFQjCNHwuv1ECKcDOdCtInmlGi05ww4mIg&sig2=hSaDBY4FN4IpdDsg2GL4Ag)| 
+| WMPM    | Paper describing the White Matter Parcellation Map |Oishi et al., _Atlas-based whole brain white matter analysis using large deformation diffeomorphic metric mapping: Application to normal elderly and Alzheimer’s disease participants_, Neuroimage, 2009 |[Link](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwiOmpCg4bvNAhWBQj4KHfQFAP8QFggeMAA&url=http%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpubmed%2F19385016&usg=AFQjCNHwuv1ECKcDOdCtInmlGi05ww4mIg&sig2=hSaDBY4FN4IpdDsg2GL4Ag)| 
 
 ##### Software status
 
