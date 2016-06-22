@@ -32,6 +32,8 @@
 <div id='id-section1'/>
 ## 1. Introduction
 
+< The JHU-MNI-ss atlas, which is often called "Eve Atlas", is based on a single-subject data as described in Oishi et al, 2009. There are co-registered T1 (MPRAGE), T2, and DTI images as well as white matter parcellation map (WMPM). Once the image of interest is normalized to this atlas coordinate, the WMPM (which also includes gray matter structures) can be superimposed for anatomical definition (e.g. which structure is affected by a lesion or where exactly is the fMRI activation site) or automated segmentation.
+
 <div id='id-section2'/>
 ## 2. Reading the data into R
 
