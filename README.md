@@ -8,7 +8,7 @@
 
 ##### References
 
-|  | | Description | Citation     | Link
+|  | Description | Citation     | Link |
 | -------------  | -------------  | -------------  | -------------  |
 | JHU-MNI-ss Atlas    | File `RegLib_C26_MoriAtlas.zip`   | Kenichi Oishi, Andreia V Faria and Susumu Mori, _JHU-MNI-ss Atlas_, 2010, Johns Hopkins University School of Medicine, Department of Radiology, Center for Brain Imaging Science| [Link](https://www.slicer.org/publications/item/view/1883) |
 | WMPM    | Paper describing the White Matter Parcellation Map |Oishi et al., _Atlas-based whole brain white matter analysis using large
