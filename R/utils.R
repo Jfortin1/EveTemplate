@@ -1,4 +1,4 @@
-getEveTemplatePath <- function(what=c("full", "brain", "brain_mask", "T2")){
+getEveTemplatePath <- function(what=c("T1", "T2", "brain", "brain_mask")){
     what <- match.arg(what)
     if (what=="full"){
         file <- system.file(package="EveTemplate", "data/JHU_MNI_SS_T1.nii.gz")
@@ -12,7 +12,7 @@ getEveTemplatePath <- function(what=c("full", "brain", "brain_mask", "T2")){
     file
 }
 
-readEveTemplate  <- function(what=c("full", "brain", "brain_mask", "T2"), reorient=FALSE){
+readEveTemplate  <- function(what=c("T1","T2", "brain", "brain_mask"), reorient=FALSE){
     what <- match.arg(what)
     readNIfTI(getEveTemplatePath(what=what), reorient=reorient)
 }
