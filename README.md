@@ -14,6 +14,7 @@
 | R CMD check    | <a href="https://travis-ci.org/Jfortin1/EveTemplate"><img src="https://travis-ci.org/Jfortin1/EveTemplate.svg?branch=master" alt="Build status"></a> |
 
 ##### References
+If using the `EveTemplate` package, please cite the following:
 
 |  | Description | Citation     | Link |
 | -------------  | -------------  | -------------  | -------------  |
