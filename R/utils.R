@@ -4,7 +4,7 @@ getEveTemplatePath <- function(what=c("T1", "T2", "Brain", "Brain_Mask")){
         file <- system.file(package="EveTemplate", "data/JHU_MNI_SS_T1.nii.gz")
     } else if (what=="Brain"){
         file <- system.file(package="EveTemplate", "data/JHU_MNI_SS_T1_Brain.nii.gz")
-    } else if (what=="Brain_mask"){
+    } else if (what=="Brain_Mask"){
         file <- system.file(package="EveTemplate", "data/JHU_MNI_SS_T1_Brain_Mask.nii.gz")
     } else if (what=="T2"){
         file <- system.file(package="EveTemplate", "data/JHU_MNI_SS_T2.nii.gz")
