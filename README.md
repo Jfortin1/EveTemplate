@@ -10,7 +10,7 @@
 
 | Resource:      | Travis CI     |
 | -------------  |  ------------- |
-| Platform:      | OSX       |
+| Platform:      | Linux       |
 | R CMD check    | <a href="https://travis-ci.org/Jfortin1/EveTemplate"><img src="https://travis-ci.org/Jfortin1/EveTemplate.svg?branch=master" alt="Build status"></a> |
 
 ##### References
@@ -42,9 +42,13 @@ Complete citations can be found [here](https://github.com/Jfortin1/EveTemplate/b
 <div id='id-section3'/>
 ## 3. White Matter Parcellation Map
 
-- Curation of the labels
-- Use 
-- 3 different types
+#### Curation of the labels
+
+#### Use
+
+#### 3 different types
+
+
 
 <div id='id-section4'/>
 ## 4. Files
