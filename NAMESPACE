@@ -1,8 +1,8 @@
 import(methods)
 import(oro.nifti)
 
-export(getEveTemplatePath)
-export(readEveTemplate)
+export(getEvePath)
+export(readEve)
 export(getEveMapPath)
 export(readEveMap)
 export(getEveMapLabels)
