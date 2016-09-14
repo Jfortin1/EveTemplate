@@ -83,7 +83,7 @@ eve_brain_mask_path <- getEvePath("Brain_Mask")
 
 
 <div id='id-section4'/>
-## 4. Files
+## 4. Summary of the files and functions
 
 | File      | Description     | Reader | 
 | -------------  | -------------  | -------------  |
