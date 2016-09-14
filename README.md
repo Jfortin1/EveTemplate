@@ -115,11 +115,7 @@ labels <- getEveMapLabels(type="I")
 
 ### Curation of the labels
 
-The script [createLabels.R](https://github.com/Jfortin1/EveTemplate/blob/master/inst/createLabels.R) was used to clean the labels of the Eve atlas anatomical structures; there were some inconsistencies in the labels. 
-
-
-
-
+The script [createLabels.R](https://github.com/Jfortin1/EveTemplate/blob/master/inst/createLabels.R) was used to clean the labels of the Eve atlas anatomical structures; there were some inconsistencies in the labels. The command `getEveMapLabels()` automatically loads the curated labels.
 
 
 
