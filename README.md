@@ -102,6 +102,7 @@ and similarly for the other tissues.
 <div id='id-section4'/>
 ## 4. White Matter Parcellation Map
 
+The Eve template comes with an atlas of the different anatomical structures of the brain (not only the White Matter structures, despite the name **White Matter Parcellation Map**). 
 #### Curation of the labels
 
 #### Use
