@@ -92,6 +92,13 @@ orthographic(seg)
 <img src="https://github.com/Jfortin1/EveTemplate/blob/master/inst/figures/eve_seg.png" width="600"/>
 </p>
 
+If one wishes to create a WM mask, could do the following:
+```{r}
+wm_mask <- seg
+wm_mask[wm_mask!=3] <- 0
+```
+and similarly for the other tissues. 
+
 <div id='id-section4'/>
 ## 4. White Matter Parcellation Map
 
