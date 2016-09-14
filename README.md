@@ -58,7 +58,7 @@ orthographic(eve_t1)
 <img src="https://github.com/Jfortin1/EveTemplate/blob/master/inst/figures/eve_t1.png" width="600"/>
 </p>
 
-For the T1, Brain and Brain mask respectively, use the following:
+For the T2 image, T1 Brain only and Brain mask respectively, use the following:
 ```{r}
 eve_t2 <- readEve("T2")
 eve_t1_brain <- readEve("Brain")
