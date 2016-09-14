@@ -83,7 +83,14 @@ eve_brain_mask_path <- getEvePath("Brain_Mask")
 <div id='id-section3'/>
 ## 3. Segmentation
 
-We performed a 3-tissue class segmentation of the T1w Eve template using the FSL FAST segmentation algorithm via the `fslr` package. The script that was used to perform the segmentation can be found [here](https://github.com/Jfortin1/EveTemplate/blob/master/inst/segmentation.R)
+We performed a 3-tissue class segmentation of the T1w Eve template using the FSL FAST segmentation algorithm via the `fslr` package. The script that was used to perform the segmentation can be found [here](https://github.com/Jfortin1/EveTemplate/blob/master/inst/segmentation.R). The segmentation labels are 0 for Background (outside of the brain), 1 for cerebrospinal fluid (CSF), 2 for grey matter (GM) and 3 for white matter (WM). Let's read the segmentation classes into R:
+```{r}
+seg <- readEveSeg()
+orthographic(seg)
+```
+<p align="center">
+<img src="https://github.com/Jfortin1/EveTemplate/blob/master/inst/figures/seg.png" width="600"/>
+</p>
 
 <div id='id-section4'/>
 ## 4. White Matter Parcellation Map
