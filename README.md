@@ -37,7 +37,7 @@ Complete BibTeX citations can be found [here](https://github.com/Jfortin1/EveTem
 
 > The JHU-MNI-ss atlas, which is often called "Eve Atlas", is based on a single-subject data as described in Oishi et al, 2009. There are co-registered T1 (MPRAGE), T2, and DTI images as well as white matter parcellation map (WMPM). Once the image of interest is normalized to this atlas coordinate, the WMPM (which also includes gray matter structures) can be superimposed for anatomical definition (e.g. which structure is affected by a lesion or where exactly is the fMRI activation site) or automated segmentation.
 
-The `EveTemplate` package contains the anatomical T1 and T1 images, together with or without the skull on, as well as a brain mask. It also contains the three types of White Matter Parcellaton Map (WMPM) with the dictionary of the labels. Finally, we have performed a 3-tissue class segmentaiton with the FSL FAST algorithm and have included the segmentation classes in the package. 
+The `EveTemplate` package contains the anatomical T1 and T1 images, together with or without the skull on, as well as a brain mask. It also contains the three types of White Matter Parcellaton Map (WMPM) with the dictionary of the labels. Finally, we have performed a 3-tissue class segmentaiton with the FSL FAST algorithm and have included the segmentation classes in the package. For the MNI152 template, see the similar package [MNITemplate](https://github.com/Jfortin1/MNITemplate).
 
 <div id='id-section2'/>
 ## 2. Reading the data into R
