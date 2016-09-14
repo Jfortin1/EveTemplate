@@ -55,10 +55,10 @@ Complete citations can be found [here](https://github.com/Jfortin1/EveTemplate/b
 
 | File      | Description     | Reader | 
 | -------------  | -------------  | -------------  |
-| JHU_MNI_SS_TI.nii.gz    | T1-w Eve Template |  `readEveTemplate("T1")`| 
-| JHU_MNI_SS_T2.nii.gz    | T2-w Eve Template |  `readEveTemplate("T2")`| 
-| JHU_MNI_SS_Brain.nii.gz | T1-w Eve Template, skull stripped  |  `readEveTemplate("Brain")`| 
-| JHU_MNI_SS_Brain_Mask.nii.gz    | T1-w Eve Template, brain mask |  `readEveTemplate("Brain_Mask")`| 
+| JHU_MNI_SS_TI.nii.gz    | T1-w Eve Template |  `readEve("T1")`| 
+| JHU_MNI_SS_T2.nii.gz    | T2-w Eve Template |  `readEve("T2")`| 
+| JHU_MNI_SS_Brain.nii.gz | T1-w Eve Template, skull stripped  |  `readEve("Brain")`| 
+| JHU_MNI_SS_Brain_Mask.nii.gz    | T1-w Eve Template, brain mask |  `readEve("Brain_Mask")`| 
 |**Tissue Segmentation:**  | | |
 | JHU_MNI_SS_Brain_FAST_seg.nii.gz    | FSL FAST tissue classes (1=CSF, 2=GM, 3=WM) |  `readEveSeg()`| 
 |**White Matter Parcellation Map:**  | | |
