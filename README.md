@@ -89,7 +89,7 @@ seg <- readEveSeg()
 orthographic(seg)
 ```
 <p align="center">
-<img src="https://github.com/Jfortin1/EveTemplate/blob/master/inst/figures/seg.png" width="600"/>
+<img src="https://github.com/Jfortin1/EveTemplate/blob/master/inst/figures/eve_seg.png" width="600"/>
 </p>
 
 <div id='id-section4'/>
