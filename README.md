@@ -26,9 +26,10 @@ Complete BibTeX citations can be found [here](https://github.com/Jfortin1/EveTem
 ## Table of content
 - [1. Introduction](#id-section1)
 - [2. Reading the data into R](#id-section2)
-- [3. White Matter Parcellation Map](#id-section4)
-- [4. Files](#id-section4)
-- [5. Miscellaneous](#id-section5)
+- [3. Segmentation](#id-section3)
+- [4. White Matter Parcellation Map](#id-section4)
+- [5. Files](#id-section5)
+- [6. Miscellaneous](#id-section6)
 
 
 <div id='id-section1'/>
@@ -80,7 +81,12 @@ eve_brain_mask_path <- getEvePath("Brain_Mask")
 ```
 
 <div id='id-section3'/>
-## 3. White Matter Parcellation Map
+## 3. Segmentation
+
+We performed a 3-tissue class segmentation of the T1w Eve template using the FSL FAST segmentation algorithm via the `fslr` package. The script that was used to perform the segmentation can be found [here](https://github.com/Jfortin1/EveTemplate/blob/master/inst/segmentation.R)
+
+<div id='id-section4'/>
+## 4. White Matter Parcellation Map
 
 #### Curation of the labels
 
@@ -90,8 +96,8 @@ eve_brain_mask_path <- getEvePath("Brain_Mask")
 
 
 
-<div id='id-section4'/>
-## 4. Summary of the files and functions
+<div id='id-section5'/>
+## 5. Summary of the files and functions
 
 | File      | Description     | Reader | 
 | -------------  | -------------  | -------------  |
@@ -109,8 +115,8 @@ eve_brain_mask_path <- getEvePath("Brain_Mask")
 | eve_map_labels.rda    | White Matter Parcellation Map labels (II) |  `getEveMapLabels("II")`|
 | eve_map_labels.rda    | White Matter Parcellation Map labels (III) |  `getEveMapLabels("III")`|
 
-<div id='id-section5'/>
-## 5. Miscellaneous
+<div id='id-section6'/>
+## 6. Miscellaneous
 
 The GitHub repository [https://github.com/muschellij2/Eve_Atlas](https://github.com/muschellij2/Eve_Atlas) from John Muschelli includes a useful discussion on how the Eve template compares to the MNI152 template and to the Rorden T1 image. The dimensions of the 3 templates do not agree, and different solutions are proposed to match the voxel locations, either by dropping slides, interpolating or performing a non-linear transformation. The files for the transformed templates are included in the repository. 
 
