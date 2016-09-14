@@ -50,6 +50,10 @@ Once the package is loaded into R, use the command `readEve()` to import the Eve
 library(EveTemplate)
 eve_t1 <- readEve()
 ```
+One can use the function `orthographic` from the `oro.nifti` package to visualize the template:
+```{r}
+orthographic(eve_t1)
+```
 For the T1, Brain and Brain mask respectively, use the following:
 ```{r}
 eve_t2 <- readEve("T2")
