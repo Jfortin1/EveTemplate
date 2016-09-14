@@ -43,17 +43,33 @@ The `EveTemplate` package contains the anatomical T1 and T1 images, together wit
 
 We first load the package into R:
 ```{r}
-library(EveTemplate)
+
 ```
-The default command `readEve()` imports the Eve template T1-w image as a `nifti` object into R:
+Once the package is loaded into R, use the command `readEve()` to import the Eve template T1-w image as a `nifti` object into R:
 ```{r}
-eve <- readEve()
+library(EveTemplate)
+eve_t1 <- readEve()
 ```
-In many preprocessing pipelines, the path of the template file must be specified instead. For this, use the following:
+For the T1, Brain and Brain mask respectively, use the following:
+```{r}
+eve_t2 <- readEve("T2")
+eve_t1_brain <- readEve("Brain")
+eve_brain_mask <- readEve("Brain_Mask")
+```
+To obtain the T2 image with the brain only, one can use the convolution of the T1 and brain mask as follows:
+```{r}
+eve_t2_brain <- eve_t2*eve_brain_mask
+```
+In many preprocessing pipelines, the path of the template file in the system must be specified. For this, use the following:
 ```{r}
 eve_path <- getEvePath()
 ```
-
+and similarly for the other images:
+```{r}
+eve_t2_path <- getEvePath("T2")
+eve_t1_brain_path <- getEvePath("Brain")
+eve_brain_mask_path <- getEvePath("Brain_Mask")
+```
 
 <div id='id-section3'/>
 ## 3. White Matter Parcellation Map
