@@ -55,7 +55,7 @@ One can use the function `orthographic` from the `oro.nifti` package to visualiz
 orthographic(eve_t1)
 ```
 <p align="center">
-<img src="https://github.com/Jfortin1/RAVEL/blob/master/inst/pictures/eve_t1.png" width="600"/>
+<img src="https://github.com/Jfortin1/RAVEL/blob/master/inst/figures/eve_t1.png" width="600"/>
 </p>
 
 For the T1, Brain and Brain mask respectively, use the following:
