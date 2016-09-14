@@ -100,14 +100,26 @@ wm_mask[wm_mask!=3] <- 0
 and similarly for the other tissues. 
 
 <div id='id-section4'/>
-## 4. White Matter Parcellation Map
+## 4. White Matter Parcellation Map (WMPM)
 
-The Eve template comes with an atlas of the different anatomical structures of the brain (not only the White Matter structures, despite the name *White Matter Parcellation Map*). 
-#### Curation of the labels
+The Eve template comes with an atlas of the different anatomical structures of the brain (not only the White Matter structures, despite the name *White Matter Parcellation Map*). There are 3 different types of WMPM available. 
 
-#### Use
+For instance, to obtain the WMPM type I, the following command should be used:
+```{r}
+map <- readEveMap(type="I")
+```
+The label dictionary can be loaded as a data frame into R using
+```{r}
+labels <- getEveMapLabels(type="I")
+```
 
-#### 3 different types
+### Curation of the labels
+
+The script [createLabels.R](https://github.com/Jfortin1/EveTemplate/blob/master/inst/createLabels.R) was used to clean the labels of the Eve atlas anatomical structures; there were some inconsistencies in the labels. 
+
+
+
+
 
 
 
