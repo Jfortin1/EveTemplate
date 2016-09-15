@@ -71,6 +71,16 @@ readEveMap <- function(..., reorient=FALSE){
 }
 
 
+#' @title Get the Structure Labels for an Eve Segmentation
+#' @description Returns the structure labels for the different look up table 
+#' images/maps from an Eve segmentation
+#' @param type Version of table/map to use
+#'
+#' @return \code{data.frame} of labels and indices
+#' @export
+#'
+#' @examples
+#' getEveMapLabels()
 getEveMapLabels <- function(type=c("I", "II", "III")){
   type <- match.arg(type)
   labels <- EveTemplate::eve_map_labels[[type]]
