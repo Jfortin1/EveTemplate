@@ -1,5 +1,5 @@
 Package: EveTemplate
-Version: 0.99.13
+Version: 0.99.14
 Title: JHU-MNI-ss (Eve) template
 Description: JHU-MNI-ss (Eve) template and white matter parcellation map (WMPM).
 Author: Jean-Philippe Fortin, John Muschelli, Russell Shinohara
@@ -9,3 +9,5 @@ Imports:
 License: GPL-2
 RoxygenNote: 5.0.1.9000
 LazyData: true
+URL: https://www.slicer.org/publications/item/view/1883
+BugReports: https://github.com/Jfortin1/EveTemplate/issues
