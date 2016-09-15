@@ -1,0 +1,17 @@
+#' @title Labels from Each Eve Segmentation
+#'
+#' @description A list of the look up table information for the indices in the 
+#' LUT NIfTI images, which are hand segmenations, to areas of the brain
+#'
+#' @format A list with 3 elements, which correspond to the LUT types, each 
+#' element is a \code{data.frame} with the following columns:
+#' \describe{
+#' \item{integer_label}{index corresponding to the nii.gz fie }
+#' \item{text_label}{name of structure with left/right designation}
+#' \item{color_r}{color to map in RGB, for R channel }
+#' \item{color_g}{color to map in RGB, for G channel}
+#' \item{color_b}{color to map in RGB, for B channel}
+#' \item{structure}{name of of the structure without left/right }
+#' \item{rightleft}{Hemisphere}
+#' }
+"eve_map_labels"

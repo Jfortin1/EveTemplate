@@ -1,0 +1,4 @@
+load("/Users/johnmuschelli/Dropbox/Packages/EveTemplate/data/eve_map_labels.rda")
+eve_map_labels
+sapply(eve_map_labels, colnames)
+sapply(eve_map_labels, colnames)[,1]

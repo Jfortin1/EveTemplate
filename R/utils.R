@@ -1,61 +1,122 @@
+#' @title Get Eve Path of File
+#' @description Returns the path of a MNI file to the user.
+#' @param what Type of image to return
+#'
+#' @return Character filename of path
+#' @export
+#'
+#' @importFrom oro.nifti readNIfTI
+#' @examples
+#' getEvePath()
 getEvePath <- function(what=c("T1", "T2", "Brain", "Brain_Mask")){
-    what <- match.arg(what)
-    if (what=="T1"){
-        file <- system.file(package="EveTemplate", "data/JHU_MNI_SS_T1.nii.gz")
-    } else if (what=="Brain"){
-        file <- system.file(package="EveTemplate", "data/JHU_MNI_SS_T1_Brain.nii.gz")
-    } else if (what=="Brain_Mask"){
-        file <- system.file(package="EveTemplate", "data/JHU_MNI_SS_T1_Brain_Mask.nii.gz")
-    } else if (what=="T2"){
-        file <- system.file(package="EveTemplate", "data/JHU_MNI_SS_T2.nii.gz")
-    }
-    file
+  what <- match.arg(what)
+  app = switch(what, 
+               "T1" = "T1",
+               "Brain" = "T1_Brain",
+               "Brain_Mask" = "T1_Brain_Mask",
+               "T2" = "T2"
+  )    
+  fname = file.path("extdata", paste0("JHU_MNI_SS_", app, ".nii.gz"))
+  
+  file <- system.file(fname, package = "EveTemplate")
+  return(file)
 }
 
-readEve  <- function(what=c("T1","T2", "Brain", "Brain_Mask"), reorient=FALSE){
-    what <- match.arg(what)
-    readNIfTI(getEvePath(what=what), reorient=reorient)
+#' @title Reads Eve File into R
+#' @description Matches the argument to pass to \code{\link{getEvePath}},
+#' then reads the NIfTI image into R
+#' @param ... Arguments to pass to \code{\link{getEvePath}}
+#' @param reorient Should the image be reoriented? 
+#' Passed to \code{\link{readNIfTI}}
+#'
+#' @return Object of class \code{nifti}
+#' @export
+#'
+#' @examples
+#' readEve(what = "Brain_Mask")
+readEve  <- function(..., reorient=FALSE){
+  readNIfTI(getEvePath(...), reorient = reorient)
 }
 
-
+#' @title Get Eve Path of Look up Table/Map Image
+#' @description Returns the path of a Eve look up table (LUT) image/map.
+#' @param type Version of table/map to use
+#'
+#' @return Character filename of path
+#' @export
+#'
+#' @examples
+#' getEveMapPath()
 getEveMapPath <- function(type=c("I", "II", "III")){
-    type <- match.arg(type)
-    file <- system.file(package="EveTemplate", paste0("data/JHU_MNI_SS_WMPM_Type-", type, ".nii.gz"))
-    file
+  type <- match.arg(type)
+  fname = file.path("extdata", paste0("JHU_MNI_SS_WMPM_Type-", type, ".nii.gz"))
+  file <- system.file(fname, package="EveTemplate")
+  return(file)
 }
 
-readEveMap <- function(type=c("I", "II", "III"), reorient=FALSE){
-    type <- match.arg(type)
-    readNIfTI(getEveMapPath(type=type), reorient=reorient)
+#' @title Reads Eve Map File into R
+#' @description Matches the argument to pass to \code{\link{getEveMapPath}},
+#' then reads the NIfTI image into R
+#' @param ... Arguments to pass to \code{\link{getEveMapPath}}
+#' @param reorient Should the image be reoriented? 
+#' Passed to \code{\link{readNIfTI}}
+#'
+#' @return Object of class \code{nifti}
+#' @export
+#'
+#' @examples
+#' readEveMap()
+readEveMap <- function(..., reorient=FALSE){
+  readNIfTI(getEveMapPath(...), reorient = reorient)
 }
 
 
 getEveMapLabels <- function(type=c("I", "II", "III")){
-    type <- match.arg(type)
-    file <- system.file(package="EveTemplate", "data/eve_map_labels.rda")
-    load(file)
-    labels <- eve_map_labels[[type]]
-    rm(eve_map_labels)
-    labels
+  type <- match.arg(type)
+  labels <- EveTemplate::eve_map_labels[[type]]
+  return(labels)
 }
 
+#' @title Get Eve Path of Segmentation File
+#' @description Returns the path of a Eve file of a segmentation to the user.
+#' @param alg Algorithm of the segmentation
+#'
+#' @return Character filename of path
+#' @export
+#'
+#' @examples
+#' getEveSegPath()
 getEveSegPath <- function(alg="FAST"){
-    if (alg!="FAST"){
-        stop("Only FAST segmentation available at the moment.")
-    }
-    file <- system.file(package="EveTemplate", "data/JHU_MNI_SS_T1_Brain_FAST_seg.nii.gz")
-    file
+  alg = match.arg(alg)
+  if (alg != "FAST"){
+    stop("Only FAST segmentation available at the moment.")
+  }
+  fname = file.path("extdata", 
+                    paste0("JHU_MNI_SS_T1_Brain_", alg, "_seg.nii.gz")
+  )
+  file <- system.file(fname, package = "EveTemplate")
+  return(file)
 }
 
-readEveSeg <- function(alg="FAST", reorient=FALSE, verbose=TRUE){
-    if (alg!="FAST"){
-        stop("Only FAST segmentation available at the moment.")
-    }
-    if (verbose){
-        cat("Label 0: Background \n")
-        cat("Label 1: CSF \n")
-        cat("Label 2: GM \n")
-        cat("Label 3: WM \n")
-    }
-    readNIfTI(getEveSegPath(alg=alg), reorient=reorient)
+#' @title Reads Eve Segmentation File into R
+#' @description Matches the argument to pass to \code{\link{getEveSegPath}},
+#' then reads the NIfTI image of the segmetation into R
+#' @param ... Arguments to pass to \code{\link{getEveSegPath}}
+#' @param reorient Should the image be reoriented? 
+#' Passed to \code{\link{readNIfTI}}
+#' @param verbose Print diagnostic messages of the labels
+#'
+#' @return Object of class \code{nifti}
+#' @export
+#'
+#' @examples
+#' readEveSeg()
+readEveSeg <- function(..., reorient=FALSE, verbose=TRUE){
+  if (verbose) {
+    message("Label 0: Background \n")
+    message("Label 1: CSF \n")
+    message("Label 2: GM \n")
+    message("Label 3: WM \n")
+  }
+  readNIfTI(getEveSegPath(...), reorient = reorient)
 }
