@@ -4,7 +4,7 @@ Title: JHU-MNI-ss (Eve) template
 Description: JHU-MNI-ss (Eve) template and white matter parcellation map (WMPM).
 Author: Jean-Philippe Fortin, John Muschelli, Russell Shinohara
 Maintainer: Jean-Philippe Fortin <jeanphi@mail.med.upenn.edu>
-Imports:
+Depends:
     oro.nifti
 License: GPL-2
 RoxygenNote: 5.0.1.9000
