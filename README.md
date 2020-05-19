@@ -112,7 +112,14 @@ The Eve template comes with an atlas of the different anatomical structures of t
 For instance, to obtain the WMPM type I, the following command should be used:
 ```{r}
 map <- readEveMap(type="I")
+orthographic(map,col=c("black",rainbow(100)))
 ```
+
+<p align="center">
+<img src="https://github.com/Jfortin1/EveTemplate/blob/master/inst/figures/eve_map1.png" width="600"/>
+</p>
+
+
 The label dictionary can be loaded as a data frame into R using
 ```{r}
 labels <- getEveMapLabels(type="I")
