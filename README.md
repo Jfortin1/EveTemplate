@@ -68,7 +68,7 @@ eve_t2 <- readEve("T2")
 eve_t1_brain <- readEve("Brain")
 eve_brain_mask <- readEve("Brain_Mask")
 ```
-To obtain the T2 image with the brain only, one can use the convolution of the T1 and brain mask as follows:
+To obtain the T2 image with the brain only, one can use the convolution of the T1 and brain mask as follows since the scans provided are already co-registered: 
 ```{r}
 eve_t2_brain <- eve_t2*eve_brain_mask
 ```
