@@ -4,7 +4,7 @@
 
 **Creator**: Jean-Philippe Fortin, fortin946@gmail.com
 
-**Authors**: Jean-Philippe Fortin, John Muschelli
+**Authors and Maintainers**: Jean-Philippe Fortin, John Muschelli
 
 ##### Software status
 
@@ -24,6 +24,7 @@ If using the `EveTemplate` package, please cite the following:
 Complete BibTeX citations can be found [here](https://github.com/Jfortin1/EveTemplate/blob/master/CITATIONS.bib).
 
 ## Table of content
+
 - [1. Introduction](#id-section1)
 - [2. Reading the data into R](#id-section2)
 - [3. Segmentation](#id-section3)
@@ -33,6 +34,7 @@ Complete BibTeX citations can be found [here](https://github.com/Jfortin1/EveTem
 
 
 <div id='id-section1'/>
+
 ## 1. Introduction
 
 > The JHU-MNI-ss atlas, which is often called "Eve Atlas", is based on a single-subject data as described in Oishi et al, 2009. There are co-registered T1 (MPRAGE), T2, and DTI images as well as white matter parcellation map (WMPM). Once the image of interest is normalized to this atlas coordinate, the WMPM (which also includes gray matter structures) can be superimposed for anatomical definition (e.g. which structure is affected by a lesion or where exactly is the fMRI activation site) or automated segmentation.
@@ -40,6 +42,7 @@ Complete BibTeX citations can be found [here](https://github.com/Jfortin1/EveTem
 The `EveTemplate` package contains the anatomical T1 and T1 images, together with or without the skull on, as well as a brain mask. It also contains the three types of White Matter Parcellaton Map (WMPM) with the dictionary of the labels. Finally, we have performed a 3-tissue class segmentaiton with the FSL FAST algorithm and have included the segmentation classes in the package. For the MNI152 template, see the similar package [MNITemplate](https://github.com/Jfortin1/MNITemplate).
 
 <div id='id-section2'/>
+
 ## 2. Reading the data into R
 
 We first load the package into R:
@@ -81,6 +84,7 @@ eve_brain_mask_path <- getEvePath("Brain_Mask")
 ```
 
 <div id='id-section3'/>
+
 ## 3. Segmentation
 
 We performed a 3-tissue class segmentation of the T1w Eve template using the FSL FAST segmentation algorithm via the `fslr` package. The script that was used to perform the segmentation can be found [here](https://github.com/Jfortin1/EveTemplate/blob/master/inst/segmentation.R). The segmentation labels are 0 for Background (outside of the brain), 1 for cerebrospinal fluid (CSF), 2 for grey matter (GM) and 3 for white matter (WM). Let's read the segmentation classes into R:
@@ -100,6 +104,7 @@ wm_mask[wm_mask!=3] <- 0
 and similarly for the other tissues. 
 
 <div id='id-section4'/>
+
 ## 4. White Matter Parcellation Map (WMPM)
 
 The Eve template comes with an atlas of the different anatomical structures of the brain (not only the White Matter structures, despite the name *White Matter Parcellation Map*). There are 3 different types of WMPM available. 
@@ -120,6 +125,7 @@ The script [createLabels.R](https://github.com/Jfortin1/EveTemplate/blob/master/
 
 
 <div id='id-section5'/>
+
 ## 5. Summary of the files and functions
 
 | File      | Description     | Reader | 
@@ -139,6 +145,7 @@ The script [createLabels.R](https://github.com/Jfortin1/EveTemplate/blob/master/
 | eve_map_labels.rda    | White Matter Parcellation Map labels (III) |  `getEveMapLabels("III")`|
 
 <div id='id-section6'/>
+
 ## 6. Miscellaneous
 
 The GitHub repository [https://github.com/muschellij2/Eve_Atlas](https://github.com/muschellij2/Eve_Atlas) from John Muschelli includes a useful discussion on how the Eve template compares to the MNI152 template and to the Rorden T1 image. The dimensions of the 3 templates do not agree, and different solutions are proposed to match the voxel locations, either by dropping slides, interpolating or performing a non-linear transformation. The files for the transformed templates are included in the repository. 
