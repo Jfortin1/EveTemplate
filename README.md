@@ -47,11 +47,11 @@ The `EveTemplate` package contains the anatomical T1 and T1 images, together wit
 
 We first load the package into R:
 ```{r}
-
+library(EveTemplate)
 ```
+
 Once the package is loaded into R, use the command `readEve()` to import the Eve template T1-w image as a `nifti` object into R:
 ```{r}
-library(EveTemplate)
 eve_t1 <- readEve()
 ```
 One can use the function `orthographic` from the `oro.nifti` package to visualize the template:
